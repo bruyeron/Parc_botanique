@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f9fafb;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem 0;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: #ffffff;
+    width: 100%;
+    height: 1.6rem;
+    background-color: #166534;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+li > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+li > a:hover {
+    color: black;
+}
+
+.navButton > button {
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+}
+
+#connexion {
+    background-color: #166534;
+    color: #ffffff;
+}
+
+#connexion:hover, #inscription:hover {
+    color:#166534;
+    background-color: #fff;
+}
+
+#inscription{
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.heroSection {
+    width: 100vw;
+    height: 100vh;
+    background: url('images/background.jpg') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(20, 83, 45, 0.8), transparent);
+    z-index: 0;
+}
+
+.introduction {
+    color: #ffffff;
+    margin: 6rem 6rem;
+    padding: 2rem;
+    position: absolute;
+    font-family: sans-serif;
+}
+
+.introduction > h1 {
+    line-height: 1.4;
+    font-weight: 700;
+    font-size: 3rem
+}
+
+.introduction > p {
+    max-width: 31rem;
+    line-height: 1.4;
+    font-family: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.introduction button {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#decouvrir {
+    background-color: #166534;
+    color: #ffffff;
+}
+
+#reserver {
+    background-color: #ffffff;
+    color: #16a34a;
+}
+
+main {
+    background-color: #f9fafb;
+    margin: 3rem 0;
+    width: 100vw;
+}
+
+.explorer h1 {
+    text-align: center;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: #166534;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h1 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: start;
+  color: #166534;
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1rem);
+}
+
+
+@media (max-width: 1012px) {
+    nav > ul {
+        display: none; /* Cache le menu */
+    }
+
+    .navButton > button {
+        width: 4rem;
+        height: 4rem;
+        font-size: 0;
+        background: none;
+        border: none;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    #connexion::before {
+        content: "🔒";
+        font-size: 1.5rem;
+    }
+
+
+
+    #inscription::before {
+        content: "📝";
+        font-size: 1.5rem;
+    }
+}
